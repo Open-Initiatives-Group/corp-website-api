@@ -17,7 +17,6 @@ export class TelegramBotService {
 	 * @param text
 	 */
 	async send(chatId: number, text: string): Promise<TelegramBot.Message> {
-		console.log(chatId);
 		return await this.bot.sendMessage(chatId, text);
 	}
 }
