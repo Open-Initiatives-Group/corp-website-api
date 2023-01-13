@@ -6,6 +6,7 @@ import { Logger } from '@nestjs/common';
 async function bootstrap() {
 	const logger = new Logger('CORP-WEBSITE-API');
 	const app = await NestFactory.create(AppModule);
+	app.enableCors();
 
 	const configService = app.get(ConfigService);
 
